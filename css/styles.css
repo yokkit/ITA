@@ -1,3 +1,85 @@
-body {
-    background-color: blue;
+.container {
+    width: 100%;
+}
+.top {
+    border: 0.25rem solid;
+}
+.nav {
+    border: 0.25rem solid;
+    height: 50px;
+    background-color: #edffa9;
+    display: flex;
+    align-items: center;
+}
+.nav ul{
+    padding: 0;
+    margin: 0 1rem;
+    width: 100%;
+}
+.nav li{
+    list-style: none;
+    display: inline-block;
+}
+.header {
+    border:0.25rem solid;
+    height: 50px;
+    background-color: #b0efeb;
+    display: flex;
+    align-items: center;
+}
+.header-item{
+    background-color: #edffa9;
+    width: 100%;
+    margin: 0 1rem;
+}
+.logo {
+    background-color: #eca3f5;
+    width: 20%;
+}
+.menu {
+    background-color: #eca3f5;
+    width: 50%;
+    margin:0 0.5rem;
+}
+.sns {
+    background-color: #eca3f5;
+    width:20%;
+    margin:0 0.5rem;
+}
+
+.main {
+    border: 0.5rem solid;
+    margin: 0.5rem 0;
+    float:left;
+    background-color: #fdbaf8;
+}
+
+.news {
+    margin: 0.5rem 1rem;
+    width: 55%;
+    float: left;
+    background-color: #b0efeb;
+}
+
+.news p{
+    column-count: 2;
+}
+
+.aside {
+    width: 40%;
+    margin: 0.5rem 0;
+    float:left;
+    background-color: #b0efeb;
+
+}
+
+.footer {
+    clear:both;
+    border: 0.5rem solid;
+    background-color: #b0efeb;
+}
+
+.footer-item {
+    margin: 0.5rem 1rem;
+    background-color: #edffa9;
 }
