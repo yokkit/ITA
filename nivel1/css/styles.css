@@ -48,7 +48,6 @@ header {
 
 main {
     border: 0.5rem solid;
-    /* float:left; */
     background-color: #fdbaf8;
     margin: 10px 0;
     display: flex;
