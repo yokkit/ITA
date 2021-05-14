@@ -7,18 +7,15 @@ body {
     text-align: center;
 }
 
-nav > ul{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 50px;
     color: grey;
     padding: 0;
+    margin-top: 25px;
 }
-nav li{
-    list-style: none;
-    display: inline-block;
-}
+
 a {
     text-decoration: none;
     color: grey;
@@ -33,10 +30,7 @@ a:hover {
     width:75px;
 }
 .menu {
-    flex-grow:2;
-    margin: 0;
-}
-.menu > ul {
+    flex:2;
     display:flex;
     justify-content: space-between;
     padding: 0;
@@ -46,36 +40,28 @@ a:hover {
 }
 .sns {
     flex-grow:1;
-    margin: 0 10px;
-}
-.sns > ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0;
     height: 75px;
 }
 
 header {
     border-top: 0;
-    display: flex;
+    background: center 50% url(../images/header.jpg);
+    height: 300px;
 }
 .header-item{
-    width: 100%;
-    margin: 10px;
-    padding:10px;
-    height: 200px;
-    background: center 60% url(../images/header.jpg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 80px 20px 0;
+    height: 135px;
+    background-color:rgba(92, 91, 90, 0.1);
 }
 .header-item p{
     font-family: "Times New Roman", Times, serif;
     color:coral;
     opacity: 0.7;
     font-size: 2rem;
-    text-align: center;
+    padding-top: 80px;
 }
 
 main {
@@ -161,19 +147,23 @@ footer {
     .container {
         width: 100%;
     }
-    nav ul{
+    nav {
         display: block;
     }
-    .sns > ul {
+    .sns {
         flex-direction: row;
+        justify-content: space-evenly;
         height: auto;
-        width: 100px;
     }
     .menu {
         margin: 10px;
     }
+    .header-item {
+        height: 75px;
+    }
     .header-item p{
         font-size: 1.2rem;
+        padding-top: 30px;
     }
     .news > p{
         column-count: 1;
