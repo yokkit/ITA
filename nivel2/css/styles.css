@@ -56,13 +56,15 @@ header {
     margin: 80px 20px 0;
     height: 135px;
     background-color:rgba(92, 91, 90, 0.1);
+    display: flex;
+    align-items: flex-end;
 }
-.header-item p{
+.header-item > p{
     font-family: 'IM Fell Great Primer', serif;
     color:coral;
     opacity: 0.7;
     font-size: 2rem;
-    padding-top: 80px;
+    margin: auto auto 0;
 }
 
 main {
@@ -82,13 +84,12 @@ main {
     height: 40px;
     background-color: lightcoral;
     color: rgb(250, 243, 235);
-    position: relative;
+    display: flex;
+    align-items: flex-end;
 }
 
 .news-title > h2 {
     margin: 0;
-    position: absolute;
-    bottom: 0;
     padding: 0 5px;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
@@ -180,7 +181,6 @@ footer {
     }
     .header-item p{
         font-size: 1rem;
-        padding-top: 30px;
     }
     .news > p{
         column-count: 1;
