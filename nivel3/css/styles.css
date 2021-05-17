@@ -67,11 +67,11 @@ a:hover {
 
 main {
     background-color: #d8d7d7;
+    /* margin: 10px 0; */
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top:10px;
 }
 
 .news {
