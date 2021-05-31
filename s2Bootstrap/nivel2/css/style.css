@@ -18,6 +18,9 @@ h2 {
 .white-section {
     background-color:#f6f6f6;
 }
+.btn-primary {
+    color:#161d6f;
+}
 
 /* header section */
 #header {

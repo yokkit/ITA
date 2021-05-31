@@ -1,14 +1,25 @@
-// Custom.scss
-
-// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+// custom scss for bootstrap5
 @import "../node_modules/bootstrap/scss/functions";
-
-// 2. Include any default variable overrides here
-$theme-colors: (
-    "primary": $danger,
-    "danger": $primary
-);
-// 3. Include remainder of required Bootstrap stylesheets
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
+
+// change theme color
+$primary: #ffc7ee;
+$secondary: #161d6f;
+
+$theme-colors: (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+);
+
+$navbar-light-color:  rgba(22, 29, 111, 0.55);
+$navbar-light-active-color: rgba(22, 29, 111, .9);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
 
