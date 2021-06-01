@@ -1,0 +1,30 @@
+@import "_template";
+
+// start my style
+.butterfly-phone {
+    max-width: 100%;
+    height: 90%;
+}
+.carousel-images {
+    width: 50%;
+    border-radius: 10%;
+}
+.butterfly-items h2 {
+    padding: 0 30%;
+    font-size: 2rem;
+    color: white;
+}
+.price-card{
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.card-title {
+    font-size: 3rem;
+}
+
+@media (max-width: 768px) {
+    .butterfly-items h2 {
+        padding: 0 5%;
+        font-size:2rem;
+    }
+}
