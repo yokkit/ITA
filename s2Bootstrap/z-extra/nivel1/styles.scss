@@ -1,0 +1,20 @@
+.container {
+    margin:0 10%;
+}
+.ball {
+    width:50px;
+    height: 50px;
+    background-color: yellow;
+    border-radius: 50%;
+    animation-name:ball-animation;
+    animation-duration: 4s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    position:relative;
+}
+
+@keyframes ball-animation {
+    0% {left: 0 ; top:0px;}
+    50% {left:300px; top:300px}
+    100% {left:600px; top:0px}
+}
