@@ -1,0 +1,27 @@
+.container {
+    margin-top: 5%;
+    text-align: center;
+}
+label{
+    display: block;
+}
+button, input{
+    margin: 0.5rem 0;
+}
+hr {
+    background-color: white;
+    border: dotted blue;
+    border-bottom: none;
+    border-width: 15px;
+    width: 15%;
+    margin: 50px auto;
+}
+h2 {
+    margin-bottom: 2rem;
+}
+ul {
+    list-style: none;
+}
+.items {
+    padding: 1rem 0;
+}
