@@ -10,6 +10,10 @@ let operationType = "";
 // input number
 for (let num of nums){
     num.addEventListener("click", function(){
+        // button animation
+        if (operationType!="="){
+        buttonAnimation(this)
+        }
         // show the second number
         if (operationType!="" && operationType!="="){
             numStrB += num.textContent;
@@ -28,6 +32,11 @@ for (let num of nums){
 // input operation type
 for (let i = 0; i<operations.length; i++){
     operations[i].addEventListener("click", function(){
+        // button animation
+        if (operationType!="="){
+            buttonAnimation(this);
+            }
+
         //calculate 
         if (operationType!= "" && numStrB != ""){
             let num1 = numStrA;
@@ -56,14 +65,35 @@ for (let i = 0; i<operations.length; i++){
             operationType = operArray[i];
             console.log("Operation Type2", operationType);
         }
+        //in case of pressed "="
+        if (operationType === "="){
+            for (let num of nums){
+                num.classList.add("equaled");
+            }
+            for (let operation of operations){
+                operation.classList.add("equaled");
+            }
+            resultBtn.classList.add("result-letter");
+        }
     })
 }
 // reset button
 resetBtn.addEventListener("click", function(){
+    // button animation
+    buttonAnimation(this);
     showBtn.textContent = "";
     resultBtn.textContent="0";
     numStrA = "";
     numStrB = "";
+    if (operationType === "="){
+        for (let num of nums){
+            num.classList.remove("equaled");
+        }
+        for (let operation of operations){
+            operation.classList.remove("equaled");
+        }
+        resultBtn.classList.remove("result-letter");
+    }
     operationType = "";
 })
 
@@ -86,11 +116,18 @@ function calcOperation(num1, num2, oper){
             if(num2 === 0){
                 result = "Can't divide by 0";
             } else {
-                result = num1 / num2;
+                result = Math.round((num1 / num2)*10000)/10000;
             }
             break;
     }
     return result;
+}
+
+function buttonAnimation(btn){
+    btn.classList.add("pressed");
+    setTimeout(function(){
+        btn.classList.remove("pressed");
+    }, 200)
 }
 
 
