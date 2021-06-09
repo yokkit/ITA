@@ -42,7 +42,7 @@
     max-width: 480px;
 }
 .reset {
-    grid-column:1/4;
+    grid-column:1/3;
 }
 .three-zero{
     grid-column:2/4;
