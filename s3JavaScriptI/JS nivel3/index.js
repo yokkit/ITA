@@ -36,7 +36,6 @@ for (let i = 0; i<operations.length; i++){
         if (operationType!="="){
             buttonAnimation(this);
             }
-
         //calculate 
         if (operationType!= "" && numStrB != ""){
             let num1 = numStrA;
@@ -97,6 +96,38 @@ resetBtn.addEventListener("click", function(){
     operationType = "";
 })
 
+// from keyboard input
+document.addEventListener("keydown", function(event){
+    const key = event.key;
+    if (!isNaN(key)){
+        console.log(typeof key);
+        const keyObj = {"1":"7", "2":"8", "3":"9", "4":"4", "5":"5", "6":"6", "7":"1", "8":"2", "9":"3"}
+
+        // numero input
+        // button animation
+        if (operationType!="="){
+            buttonAnimation(nums[keyObj[key]]);
+            }
+        // show the second number
+        if (operationType!="" && operationType!="="){
+            numStrB += key;
+            showBtn.innerHTML += key;
+            console.log("Current Second Number", numStrB);
+        }
+        // show the first number
+        else if (operationType!="="){
+            numStrA += key;
+            showBtn.innerHTML += key;
+            console.log("Current First Number", numStrA);
+        }
+    }
+
+    const operationKeys = ["+", "-", "*", "/", "="];
+    if(operationKeys.indexOf(key) != -1){
+        console.log(key);
+    }
+});
+
 // calculation function
 function calcOperation(num1, num2, oper){
     num1 = parseFloat(num1);
@@ -118,7 +149,7 @@ function calcOperation(num1, num2, oper){
             } else {
                 result = Math.round((num1 / num2)*10000)/10000;
             }
-            break;
+        break;
     }
     return result;
 }
