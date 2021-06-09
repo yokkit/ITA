@@ -122,9 +122,48 @@ document.addEventListener("keydown", function(event){
         }
     }
 
-    const operationKeys = ["+", "-", "*", "/", "="];
-    if(operationKeys.indexOf(key) != -1){
+    const operArray =["/", "*", "-", "+", "="];
+    const numIndex = operArray.indexOf(key)
+    if(numIndex != -1){
         console.log(key);
+         //calculate 
+         if (operationType!= "" && numStrB != ""){
+            let num1 = numStrA;
+            let num2 = numStrB;
+            numStrA = calcOperation(num1, num2, operationType);
+            numStrB = "";
+            resultBtn.innerHTML = numStrA;
+            if (numStrA === "Can't divide by 0"){
+                operationType = "=";
+                console.log("Operation type1", operationType);
+            }
+        }
+        //Show the opration type and not for adding the operation types twice
+        
+        const fontAwesomeArray = [
+            '<i class="fas fa-divide"></i>', 
+            '<i class="fas fa-times"></i>',
+            '<i class="fas fa-minus"></i>',
+            '<i class="fas fa-plus"></i>',
+            '<i class="fas fa-equals"></i>'
+            ]
+        const condition1 = showBtn.innerHTML.slice(-1) != ">";
+        const condition2 = resultBtn.textContent != "Can't divide by 0";
+        if (condition1 && condition2){
+            showBtn.innerHTML += fontAwesomeArray[numIndex];
+            operationType = operArray[numIndex];
+            console.log("Operation Type2", operationType);
+        }
+        //in case of pressed "="
+        if (operationType === "="){
+            for (let num of nums){
+                num.classList.add("equaled");
+            }
+            for (let operation of operations){
+                operation.classList.add("equaled");
+            }
+            resultBtn.classList.add("result-letter");
+        }
     }
 });
 
