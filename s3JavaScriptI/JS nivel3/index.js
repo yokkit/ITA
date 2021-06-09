@@ -14,6 +14,10 @@ for (let num of nums){
         if (operationType!="="){
         buttonAnimation(this)
         }
+
+        // function
+        // showCalculate(num);
+        
         // show the second number
         if (operationType!="" && operationType!="="){
             numStrB += num.textContent;
@@ -99,15 +103,21 @@ resetBtn.addEventListener("click", function(){
 // from keyboard input
 document.addEventListener("keydown", function(event){
     const key = event.key;
-    if (!isNaN(key)){
-        console.log(typeof key);
-        const keyObj = {"1":"7", "2":"8", "3":"9", "4":"4", "5":"5", "6":"6", "7":"1", "8":"2", "9":"3"}
+    if (!isNaN(key)|| key==="."){
+        console.log(key, typeof key);
+        const keyObj = {".":"0", "1":"7", "2":"8", "3":"9", "4":"4", "5":"5", "6":"6", "7":"1", "8":"2", "9":"3", "0":"10"}
+        console.log(nums[keyObj[key]]);
 
         // numero input
         // button animation
         if (operationType!="="){
             buttonAnimation(nums[keyObj[key]]);
+            
             }
+
+        // function
+        // showCalculate(key);
+
         // show the second number
         if (operationType!="" && operationType!="="){
             numStrB += key;
@@ -166,6 +176,10 @@ document.addEventListener("keydown", function(event){
         }
     }
 });
+
+function showCalculate(){
+
+}
 
 // calculation function
 function calcOperation(num1, num2, oper){
