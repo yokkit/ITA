@@ -2,6 +2,14 @@ const str = 'Una dirección de correo electrónico es la dirección que utiliza 
 
 const condition = /[a-zA-ZÀ-ÿ\u00f1\u00d10-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-ZÀ-ÿ\u00f1\u00d10-9-]+(?:\.[a-zA-ZÀ-ÿ\u00f1\u00d10-9-]+)*/g
 
-let arr = str.match(condition);
-console.log(arr);
+let emails = str.match(condition);(emails);
+let resultat = [];
+for (let email of emails){
+    email = email.toLowerCase();
+    let varidar = resultat.includes(email);
+    if (!varidar){
+        resultat.push(email);
+    }
+}
+console.log(resultat);
 

@@ -79,10 +79,20 @@ e5Btn.addEventListener("click", function(){
     e5Ul.textContent = "";
     const str = emailInput.value;
     const condition = /[a-zA-ZÀ-ÿ\u00f1\u00d10-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-ZÀ-ÿ\u00f1\u00d10-9-]+(?:\.[a-zA-ZÀ-ÿ\u00f1\u00d10-9-]+)*/g;
-    let arrEmail = str.match(condition);
-    console.log(arrEmail);
+    let emails = str.match(condition);
+    console.log(emails);
+
+    let resultat = [];
+    for (let email of emails){
+        email = email.toLowerCase();
+        let varidar = resultat.includes(email);
+        if (!varidar){
+            resultat.push(email);
+        }
+    }
+    console.log(resultat);
     
-    for (let email of arrEmail){
+    for (let email of resultat){
         console.log(email);
         const newLi = document.createElement("li");
         newLi.textContent = email;
