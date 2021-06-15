@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S3 Java Script I</title>
+</head>
+<body>
+    
+    <script>
+        // exercici1
+        console.log("===Exercici1===");
+        console.log("Hola mundo");
+
+        // exercici2
+        console.log("===Exercici2=== (ver alert)");
+        alert("Me llamo Yoko!");
+
+        // exercici3
+        console.log("===Exercici3===");
+        const nom = "Yoko";
+        const cognom = "Tochigi";
+        console.log(nom + " " + cognom);
+
+        // exercici4
+        console.log("===Exercici4===");
+        const var1 = 34;
+        const var2 = 56;
+        console.log(`La suma entre ${var1} i ${var2} es ${var1 + var2}`);
+
+        // exercici5
+        console.log("===Exercici5=== (ver alert)");
+        const nota_examen = 4.6;
+        let mensaje;
+        if (nota_examen < 5) {
+            mensaje = `Ohh has suspendido el examen con un ${nota_examen}`;
+        } else {
+            mensaje = `Has aprobado el examen con un ${nota_examen}.`;
+        }
+        alert(mensaje);
+
+        // exercici6
+        console.log("===Exercici6===");
+        const text = "Tinc un cotxe de color blau";
+        const nuevoText1 = text.slice(0, text.length -4) + "verd";
+        console.log(nuevoText1);
+
+        let nuevoText2 = '';
+        for (let i=0; i<text.length; i++){
+            if (text[i] === "o") {
+                nuevoText2 += "u"
+            } else {
+                nuevoText2 += text[i];
+            }
+        }
+        console.log(nuevoText2);
+
+        // exercici7
+        console.log("===Exercici7===");
+        const objectes = ["taula", "cadira","ordinador", "libreta"];
+
+        for (let i=0; i<objectes.length; i++) {
+            console.log(`L'objecte ${objectes[i]} està a la posició ${i}.`);
+        }
+
+        // exercici8
+        console.log("===Exercici8===");
+        function calculadora(valor1, valor2, operador){
+            return operador(valor1, valor2)
+        }
+        function suma(valor1, valor2){
+            return valor1 + valor2;
+        }
+        function resta(valor1, valor2){
+            return valor1 - valor2;
+        }
+        function multiplicacion(valor1, valor2){
+            return valor1 * valor2;
+        }
+
+        const resultat = calculadora(40, 20, resta);
+        console.log(resultat);
+
+        // ==================================
+        // nivel2
+        // ==================================
+        console.log("===Nivel2===");
+        function calculadora2(valor1, valor2, operador){
+            return operador(valor1, valor2);
+        }
+
+        function suma(valor1, valor2){
+            return valor1 + valor2;
+        }
+        function resta(valor1, valor2){
+            return valor1 - valor2;
+        }
+        function multiplicacion(valor1, valor2){
+            return valor1 * valor2;
+        }
+        function division(valor1, valor2){
+            if (valor2 === 0) {
+                return "No se puede dividir en zero";
+            } else {
+                return (valor1 / valor2).toFixed(2);
+            }
+        }
+
+        // Conprobacion
+        console.log("suma", calculadora2(20, 30, suma));
+        console.log("resta", calculadora2(20, 30, resta));
+        console.log("multiplicacion", calculadora2(20, 30, multiplicacion));
+        console.log("division", calculadora2(20, 30, division));
+        console.log("division(zero)", calculadora2(20, 0, division));
+
+    </script>
+</body>
+</html>

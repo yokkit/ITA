@@ -1,0 +1,34 @@
+body {
+    background-color: #edffec;
+}
+.container-fluid {
+    margin-top: 5%;
+    text-align: center;
+    color: hsl(323, 12%, 31%);
+}
+label{
+    display: block;
+}
+button, input{
+    margin: 0.5rem 0;
+}
+hr {
+    background-color: white;
+    border: dotted blue;
+    border-bottom: none;
+    border-width: 15px;
+    width: 15%;
+    margin: 50px auto;
+}
+h2 {
+    margin: 2rem 0;
+    background-color: #f6dfeb;
+    border-bottom: 5px #e4bad4 solid;
+    border-top: 5px #e4bad4 solid;
+}
+ul {
+    list-style: none;
+}
+.items {
+    padding: 1rem 0;
+}
